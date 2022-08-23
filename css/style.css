@@ -293,6 +293,7 @@ a.active {
     background: url(../img/pront.jpg);
     background-size: cover;
     height: 100vh;
+    background-position: 80% top !important;
 }
 
 .table-cell {
@@ -321,11 +322,12 @@ a.active {
     position: absolute;
     /*
     border: 10px solid #425BB5; */
-    width: 400px;
-    height: 400px;
     top: 14px;
     left: 45px;
     z-index: 1
+}
+.about-border-media img {
+    display: none;
 }
 
 
@@ -701,8 +703,66 @@ a.active {
 }
 
 
+/* custom
+==================================================*/
+#projects .portfolio_item .item_info p a:visited {
+    color: #9799ec;
+}
+
+#projects .portfolio_item .item_info a:visited {
+    color: #fff;
+}
+
+#contact .col-md-12 h4 {
+    color: #fff;
+}
+#contact .col-md-12 h4::before {
+    background: #fff;
+}
+#contact .col-md-12 h1 {
+    color: #fff;
+}
+
+.circle {
+    border: 3px dotted #fff;
+    border-radius: 50%;
+    width: 31.3%;
+    height: 350px;
+    padding-top: 10%;
+    margin-right: 2%;
+    color: #fff;
+}
+
+#contact .icon {
+    width: 60px;
+}
+
+.about-img-div img {
+    max-width: 100%;
+}
+
+
 /* Responsive media queries
 ==================================================*/
+@media (max-width: 1200px) {
+    .about-border {
+        display: none;
+    }
+    .about-border-media {
+        position: absolute;
+        top: 14px;
+        left: 45px;
+        z-index: 1;
+    }
+    .about-border-media img {
+        display: block;
+    }
+    .circle {
+        border: 0;
+        margin-right: 0;
+        width: auto;
+    }
+}
 
 @media (max-width: 991px) {
     .portfolio .categories-grid .categories ul li a {
@@ -714,15 +774,35 @@ a.active {
 }
 
 @media (max-width: 768px) {
+    nav li a {
+        font-size: 14px;
+    }
     .timeline-event-copy {
         width: 90%;
         left: 2em;
+    }
+    .circle {
+        margin-right: 100px;
+        width: auto;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav li a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 560px){
+    .about-border-media {
+        display: none;
     }
 }
 
 @media (max-width: 500px) {
     h1 {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Pompiere', cursive; 
         font-size: 50px;
         line-height: 50px;
     }
@@ -730,12 +810,12 @@ a.active {
     .disply-table {
         height: 600px;
     }
-    .about-border {
-        width: 265px;
-    }
     .portfolio .categories-grid .categories ul li {
         list-style: none;
         margin: 10px 0;
+    }
+    .circle {
+        width: 100%;
     }
 }
 
@@ -770,33 +850,4 @@ a.active {
 }
 
 
-/* custom
-==================================================*/
 
-#projects .portfolio_item .item_info a:visited {
-    color: #fff;
-}
-
-#contact .col-md-12 h4 {
-    color: #fff;
-}
-#contact .col-md-12 h4::before {
-    background: #fff;
-}
-#contact .col-md-12 h1 {
-    color: #fff;
-}
-
-.circle {
-    border: 3px dotted #fff;
-    border-radius: 50%;
-    width: 31.3%;
-    height: 350px;
-    padding-top: 10%;
-    margin-right: 2%;
-    color: #fff;
-}
-
-#contact .icon {
-    width: 60px;
-}
